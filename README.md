@@ -1,6 +1,6 @@
 # ape-design.com
 
-Portfolio website of Alejandro Peña Campos, built from the Figma file "ape-design-website" (About page, three case studies, menu overlay; Desktop 1440, Tablet 768, Mobile 390).
+Portfolio website of Alejandro Peña Campos, built from the Figma file "ape-design-website" (About page, three case studies, menu overlay; Desktop 1440, Tablet 768, Mobile 390). Available in English (`/`), German (`/de/`) and Spanish (`/es/`).
 
 ## See it on your computer
 
@@ -12,7 +12,8 @@ Double click `index.html`. It opens in your browser and works offline. No instal
 |---|---|---|
 | Text on the About page | `index.html` | The section comments: HERO, CAPABILITIES, CLIENTS, SELECTED WORK, APPROACH & PROCESS, CONTACT SECTION |
 | Text on a case study | `video-up.html`, `petit-bambou.html`, `demajo.html` | INTRO, OVERVIEW, WORK, NEXT PROJECT |
-| Header, menu, contact links, footer | every `.html` file | SITE HEADER, MENU OVERLAY, CONTACT SECTION, SITE FOOTER (keep them identical on every page) |
+| German or Spanish text | the same file inside `de/` or `es/` | Same section comments as the English page |
+| Header, menu, contact links, footer | every `.html` file, including `de/` and `es/` | SITE HEADER, MENU OVERLAY, CONTACT SECTION, SITE FOOTER (keep them identical on every page of the same language) |
 | Colors, fonts, type sizes, spacing | `assets/css/tokens.css` | Same names as the Figma variables (`--type-heading-l`, `--space-3xl`, `--brand-scarlet-fire`...) |
 | The look of one part | `assets/css/components.css` | The banner with that name, for example "Gallery tile" |
 | Animations | `assets/css/motion.css` | The motion plan at the top |
@@ -25,9 +26,8 @@ Double click `index.html`. It opens in your browser and works offline. No instal
 
 ## Still to provide
 
-- **Dribbble link:** the Contact section points to `https://dribbble.com/`. Replace it with your profile URL in every page (search for `dribbble.com`).
+- **Dribbble link:** the Contact section points to `https://dribbble.com/`. Replace it with your profile URL in every page, including `de/` and `es/` (search for `dribbble.com`).
 - **Playground:** shown in the menu as "coming soon" (greyed out) until the page exists.
-- **DE and ES:** the language menu lists them as "coming soon"; only English content exists.
 - **Rive portrait:** the hero uses the static portrait from Figma. When the `.riv` file is ready it goes in the same slot (`hero-portrait` in `index.html`).
 
 ## Put it online (Cloudflare Pages, free)
@@ -47,7 +47,13 @@ The site already tells Google who you are (structured data in each page head), l
 2. Open search.google.com/search-console, add the domain `ape-design.com` and verify it with the DNS option (Cloudflare can add the record in one click).
 3. In Search Console, open **Sitemaps** and submit `https://ape-design.com/sitemap.xml`.
 
-When you add a page, add its address to `sitemap.xml` too.
+When you add a page, add its address to `sitemap.xml` too, with its German and Spanish versions.
+
+## Languages
+
+Every English page has a German twin in `de/` and a Spanish twin in `es/` with the same file name. The language menu in the header links each page to its twins. When you change text on one page, change it in the other two languages as well.
+
+The German version uses Swiss spelling (ss instead of ß) and addresses the reader with "du". Each page head lists its twins (`hreflang` links), so Google shows visitors the version in their language.
 
 ## Folder map
 
@@ -57,6 +63,8 @@ video-up.html         Case study
 petit-bambou.html     Case study
 demajo.html           Case study
 404.html              Page not found
+de/                   German version (same file names)
+es/                   Spanish version (same file names)
 sitemap.xml, robots.txt   for search engines
 _headers              caching and security settings for Cloudflare
 wrangler.jsonc        Cloudflare settings

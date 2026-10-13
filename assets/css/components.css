@@ -114,7 +114,7 @@
   background: var(--color-accent);
 }
 
-.lang-option:disabled { cursor: not-allowed; }
+.lang-option:hover { color: var(--neutral-0); }
 
 /* ── Menu overlay ───────────────────────── */
 .site-menu {
