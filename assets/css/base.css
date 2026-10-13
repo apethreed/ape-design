@@ -3,7 +3,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--space-l);
+  /* Anchor links land below the pinned header. */
+  scroll-padding-top: var(--header-height);
 }
 
 body {
