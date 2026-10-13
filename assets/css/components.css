@@ -130,7 +130,7 @@
   margin: 0;
   padding: 0 max(var(--grid-margin), (100% - var(--grid-content)) / 2) 40px;
   border: 0;
-  background: var(--neutral-900);
+  background: var(--color-surface-inverse); /* same black as the header */
   color: var(--neutral-0);
   overflow-y: auto;
 }
@@ -182,9 +182,11 @@
   padding-top: 72px;
 }
 
+/* Menu links sit on the right hand side. */
 .site-menu-nav ul {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 8px;
   text-transform: uppercase;
 }
@@ -219,6 +221,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: flex-end;
     gap: 8px 56px;
   }
 }
