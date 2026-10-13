@@ -384,7 +384,8 @@
 
 @media (min-width: 80em) {
   .capabilities-content {
-    grid-template-columns: var(--label-column) 1fr 1fr;
+    /* The label column grows when a translated title is longer than 320px. */
+    grid-template-columns: minmax(var(--label-column), max-content) 1fr 1fr;
     column-gap: var(--space-2xl);
   }
 

@@ -26,7 +26,6 @@ Double click `index.html`. It opens in your browser and works offline. No instal
 
 ## Still to provide
 
-- **Dribbble link:** the Contact section points to `https://dribbble.com/`. Replace it with your profile URL in every page, including `de/` and `es/` (search for `dribbble.com`).
 - **Playground:** shown in the menu as "coming soon" (greyed out) until the page exists.
 - **Rive portrait:** the hero uses the static portrait from Figma. When the `.riv` file is ready it goes in the same slot (`hero-portrait` in `index.html`).
 
@@ -54,6 +53,8 @@ When you add a page, add its address to `sitemap.xml` too, with its German and S
 Every English page has a German twin in `de/` and a Spanish twin in `es/` with the same file name. The language menu in the header links each page to its twins. When you change text on one page, change it in the other two languages as well.
 
 The German version uses Swiss spelling (ss instead of ß) and addresses the reader with "du". Each page head lists its twins (`hreflang` links), so Google shows visitors the version in their language.
+
+Every page also tells browsers not to auto translate it (`translate="no"` and the `notranslate` meta tag). Without this, Chrome turns the German pages back into English and translates the German word "es" in the language menu into "it".
 
 ## Folder map
 
