@@ -1,15 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ape-design.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/"/>
   </url>
   <url>
     <loc>https://ape-design.com/video-up</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/video-up"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/video-up"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/video-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/video-up"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/de/video-up</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/video-up"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/video-up"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/video-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/video-up"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/es/video-up</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/video-up"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/video-up"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/video-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/video-up"/>
   </url>
   <url>
     <loc>https://ape-design.com/petit-bambou</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/petit-bambou"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/de/petit-bambou</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/petit-bambou"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/es/petit-bambou</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/petit-bambou"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/petit-bambou"/>
   </url>
   <url>
     <loc>https://ape-design.com/demajo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/demajo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/demajo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/demajo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/demajo"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/de/demajo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/demajo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/demajo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/demajo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/demajo"/>
+  </url>
+  <url>
+    <loc>https://ape-design.com/es/demajo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ape-design.com/demajo"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ape-design.com/de/demajo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ape-design.com/es/demajo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ape-design.com/demajo"/>
   </url>
 </urlset>
