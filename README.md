@@ -22,6 +22,8 @@ Double click `index.html`. It opens in your browser and works offline. No instal
 
 **Turn off an animation on one element:** remove `data-reveal` from it.
 
+**Hero lines speed:** the "visual designer" lines move as the visitor scrolls. Change `--marquee-speed` in `assets/css/tokens.css` (0.6 means 0.6px of sideways movement per 1px of scroll; higher is faster).
+
 **Switch the display font to The Henston:** put the `.woff2` file in `assets/fonts/`, copy the Fraunces `@font-face` block at the top of `assets/css/tokens.css`, change the name and file, then set `--font-display` to `"The Henston"`. Every heading updates.
 
 ## Still to provide
