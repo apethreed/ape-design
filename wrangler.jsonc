@@ -1,0 +1,11 @@
+// Cloudflare settings for ape-design.com. The site is plain files, so there
+// is no build step: Cloudflare serves this folder as it is.
+{
+  "name": "ape-design",
+  "compatibility_date": "2026-10-13",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
