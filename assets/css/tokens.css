@@ -102,7 +102,7 @@
   --dur-slow: 900ms;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --marquee-loop: 40s;
+  --marquee-speed: 0.6; /* hero rows move 0.6px per 1px of page scroll */
 }
 
 /* Tablet mode (Figma frame 768) */

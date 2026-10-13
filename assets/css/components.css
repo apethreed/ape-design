@@ -302,9 +302,10 @@
 }
 
 /* ── Hero marquees ──────────────────────── */
-/* Four rows of "visual designer" drift behind the intro. Row 02 (ink) runs
-   right to left, the three red rows run left to right. Each track holds four
-   copies, so moving it by 25% equals exactly one word and loops seamlessly. */
+/* Four rows of "visual designer" slide behind the intro as the page scrolls.
+   Row 02 (ink) runs right to left, the three red rows run left to right. Each
+   track holds four copies, so moving it by 25% equals exactly one word and
+   loops seamlessly. */
 .hero-marquees {
   position: absolute;
   inset: 0;
@@ -384,7 +385,8 @@
 
 @media (min-width: 80em) {
   .capabilities-content {
-    grid-template-columns: var(--label-column) 1fr 1fr;
+    /* The label column grows when a translated title is longer than 320px. */
+    grid-template-columns: minmax(var(--label-column), max-content) 1fr 1fr;
     column-gap: var(--space-2xl);
   }
 
