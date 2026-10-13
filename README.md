@@ -26,7 +26,6 @@ Double click `index.html`. It opens in your browser and works offline. No instal
 
 ## Still to provide
 
-- **Dribbble link:** the Contact section points to `https://dribbble.com/`. Replace it with your profile URL in every page, including `de/` and `es/` (search for `dribbble.com`).
 - **Playground:** shown in the menu as "coming soon" (greyed out) until the page exists.
 - **Rive portrait:** the hero uses the static portrait from Figma. When the `.riv` file is ready it goes in the same slot (`hero-portrait` in `index.html`).
 
