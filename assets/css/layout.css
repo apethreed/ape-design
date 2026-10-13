@@ -1,0 +1,42 @@
+/* layout.css: reusable layout building blocks.
+   .section  full bleed band with the grid margin on both sides. Content is
+             capped at --grid-content (1280px), so wide screens keep the
+             Figma proportions instead of stretching.
+   .stack    vertical rhythm, gap set with --stack-gap.
+   .split    label column + body. Stacked on mobile and tablet, side by side
+             on desktop (320px label, 80px gap), as in every Figma frame. */
+
+.section {
+  position: relative;
+  padding-block: var(--space-3xl);
+  padding-inline: max(var(--grid-margin), (100% - var(--grid-content)) / 2);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, var(--space-l));
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: var(--split-gap, var(--space-m));
+}
+
+@media (min-width: 80em) {
+  .split {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-2xl);
+  }
+
+  .split > :first-child {
+    flex: 0 0 var(--label-column);
+  }
+
+  .split > :last-child {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}

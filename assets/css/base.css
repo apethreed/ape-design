@@ -1,0 +1,137 @@
+/* base.css: element defaults and the Figma text styles.
+   Each .text-* class matches one Figma text style of the same name. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--space-l);
+}
+
+body {
+  background: var(--color-surface-inverse);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-surface-inverse);
+  color: var(--color-on-inverse);
+}
+
+/* ── Display styles (font/display) ───────── */
+.text-signature,
+.text-contact,
+.text-heading-l,
+.text-heading-s,
+.text-statement,
+.text-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: var(--leading-display);
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+}
+
+.text-signature { font-size: var(--type-display); }
+.text-contact   { font-size: var(--type-contact); }
+.text-heading-l { font-size: var(--type-heading-l); }
+.text-heading-s { font-size: var(--type-heading-s); }
+.text-statement { font-size: var(--type-statement); }
+.text-label     { font-size: var(--type-label); }
+
+/* ── Text styles (font/body) ─────────────── */
+.text-lead {
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+}
+
+.text-subtitle {
+  font-size: var(--type-subtitle);
+  font-weight: 600;
+  line-height: var(--leading-subtitle);
+}
+
+.text-body {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.text-body-medium {
+  font-size: var(--type-body);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.text-meta {
+  font-size: var(--type-meta);
+  font-weight: 500;
+  line-height: var(--leading-body);
+}
+
+.text-link {
+  font-size: var(--type-link);
+  line-height: 1.2;
+}
+
+.text-caption {
+  font-size: var(--type-caption);
+  line-height: var(--leading-lead);
+}
+
+.text-caption-strong {
+  font-size: var(--type-caption);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ── UI styles (font/body) ───────────────── */
+.text-button {
+  font-size: var(--type-lead);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.text-email {
+  font-size: var(--type-statement);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-language {
+  font-size: var(--type-caption);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+/* ── Accessibility helpers ───────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--grid-margin);
+  top: -100%;
+  z-index: 200;
+  padding: var(--space-2xs) var(--space-m);
+  background: var(--color-on-inverse);
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.skip-link:focus { top: var(--space-2xs); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

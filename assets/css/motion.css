@@ -1,0 +1,136 @@
+/* motion.css: CSS only animation and the reduced motion safety net.
+   Motion plan (see assets/js/motion.js for the scroll part):
+   1. Hero moment: four "visual designer" rows drift in opposite directions
+      while the portrait and statement rise in on load.
+   2. Supporting: sections and tiles fade up once as they scroll into view.
+   3. Micro: tile overlay, button arrow, link colors, menu sheet slide.
+   4. Transitions: pages cross fade (View Transitions API).
+   5. Reduced motion: marquees freeze in their Figma composition, nothing
+      moves, content simply appears.
+   The hero entrance needs the "js" class on <html> (set in each page head).
+   Reveals need "motion-ready", added by motion.js. Without JavaScript
+   nothing is ever hidden. */
+
+/* ── Hero marquees ──────────────────────── */
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+@keyframes marquee-ltr {
+  from { transform: translateX(-25%); }
+  to   { transform: translateX(0); }
+}
+
+/* Negative delays start each row at its Figma position. */
+.marquee-track {
+  animation: marquee-ltr var(--marquee-loop) linear infinite;
+  animation-delay: var(--marquee-phase, 0s);
+}
+
+.marquee--1 .marquee-track { --marquee-phase: -9.6s; }
+.marquee--2 .marquee-track { --marquee-phase: -10.6s; animation-name: marquee-rtl; }
+.marquee--3 .marquee-track { --marquee-phase: -19.6s; }
+.marquee--4 .marquee-track { --marquee-phase: -39.6s; }
+
+/* ── Scroll reveals ─────────────────────── */
+.motion-ready [data-reveal] {
+  opacity: 0;
+  translate: 0 32px;
+  transition:
+    opacity var(--dur-slow) var(--ease-out-expo),
+    translate var(--dur-slow) var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.motion-ready [data-reveal][data-state="visible"] {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/* ── Hero entrance ──────────────────────── */
+@keyframes portrait-rise {
+  from { opacity: 0; translate: 0 48px; }
+}
+
+@keyframes line-rise {
+  from { opacity: 0; translate: 0 0.6em; }
+}
+
+.js .hero-portrait img {
+  animation: portrait-rise 1.2s var(--ease-out-expo) both;
+}
+
+/* Narrow screens: the statement rises as one block. Wide screens: line by line. */
+.js .hero-statement {
+  animation: line-rise 1s var(--ease-out-expo) 150ms both;
+}
+
+.js .hero-copy .button {
+  animation: line-rise 1s var(--ease-out-expo) 520ms both;
+}
+
+@container (min-width: 780px) {
+  .js .hero-statement { animation: none; }
+
+  .js .hero-statement > span {
+    animation: line-rise 1s var(--ease-out-expo) both;
+  }
+
+  .js .hero-statement > span:nth-child(1) { animation-delay: 150ms; }
+  .js .hero-statement > span:nth-child(2) { animation-delay: 230ms; }
+  .js .hero-statement > span:nth-child(3) { animation-delay: 310ms; }
+  .js .hero-statement > span:nth-child(4) { animation-delay: 390ms; }
+}
+
+/* ── Menu overlay ───────────────────────── */
+.site-menu {
+  transition:
+    translate var(--dur-base) var(--ease-out-expo),
+    opacity var(--dur-base) var(--ease-out-expo),
+    overlay var(--dur-base) allow-discrete,
+    display var(--dur-base) allow-discrete;
+  translate: 0 -24px;
+  opacity: 0;
+}
+
+.site-menu[open] {
+  translate: 0 0;
+  opacity: 1;
+}
+
+@starting-style {
+  .site-menu[open] {
+    translate: 0 -24px;
+    opacity: 0;
+  }
+}
+
+/* ── Page transitions ───────────────────── */
+@view-transition { navigation: auto; }
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) { animation: 240ms var(--ease-in-out) both vt-fade-out; }
+  ::view-transition-new(root) { animation: 480ms var(--ease-out-expo) both vt-fade-in; }
+}
+
+@keyframes vt-fade-out { to { opacity: 0; } }
+@keyframes vt-fade-in  { from { opacity: 0; } }
+
+/* ── Reduced motion ─────────────────────── */
+/* Marquees freeze at their Figma composition; reveals become instant. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused; }
+
+  .motion-ready [data-reveal] { translate: none; }
+
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-portrait img,
+  .hero-statement,
+  .hero-statement > span,
+  .hero-copy .button { animation: none !important; }
+}

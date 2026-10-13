@@ -1,0 +1,161 @@
+/* tokens.css: every color, font, size and timing for the whole site.
+   Values mirror the Figma "Design system" variables. Figma has three modes
+   (Mobile 390, Tablet 768, Desktop 1440), so each size token is set three
+   times: mobile first here, then overridden at 48em (768px) and 80em (1280px).
+   Change a value here and it updates everywhere. */
+
+/* Fonts are self hosted in assets/fonts. To switch the display font to
+   The Henston, add its @font-face below and change --font-display. */
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Brand */
+  --brand-coffee-bean: #0d0106;
+  --brand-ghost-white: #fbfbff;
+  --brand-scarlet-fire: #ff331f;
+  --brand-scarlet-fire-deep: #e52e1c;
+  --brand-scarlet-fire-faint: #f5311e;
+  --brand-scarlet-fire-stripe: #e02d1b;
+  --brand-scarlet-fire-glow: #ff4a37;
+  --brand-vibrant-coral: #ff695c;
+
+  /* Neutrals */
+  --neutral-0: #ffffff;
+  --neutral-100: #e8e8e8;
+  --neutral-200: #d6d6d6;
+  --neutral-400: #808080;
+  --neutral-500: #737373;
+  --neutral-600: #5c5c5c;
+  --neutral-800: #2a2a2a;
+  --neutral-900: #141414;
+
+  /* Roles */
+  --color-accent: var(--brand-scarlet-fire);
+  --color-surface-inverse: var(--brand-coffee-bean);
+  --color-on-inverse: var(--brand-ghost-white);
+  --color-ink: var(--neutral-900);
+  --color-ink-muted: var(--neutral-600);
+  --color-line: var(--neutral-200);
+
+  /* Font families */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type sizes (Mobile) */
+  --type-caption: 13px;
+  --type-meta: 14px;
+  --type-body: 16px;
+  --type-link: 16px;
+  --type-lead: 18px;
+  --type-subtitle: 18px;
+  --type-label: 20px;
+  --type-statement: 24px;
+  --type-heading-s: 32px;
+  --type-heading-l: 48px;
+  --type-contact: 56px;
+  --type-display: 144px;
+
+  /* Line heights from the Figma text styles */
+  --leading-display: 1.38;
+  --leading-lead: 1.45;
+  --leading-body: 1.5;
+  --leading-subtitle: 1.3;
+
+  /* Space (Mobile) */
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 56px;
+
+  /* Grid (Mobile) */
+  --grid-margin: 20px;
+  --grid-gutter: 12px;
+  --grid-content: 1280px;
+
+  /* Component sizes */
+  --header-height: 96px;
+  --label-column: 320px;
+  --radius-tile: 8px;
+
+  /* Motion */
+  --dur-fast: 180ms;
+  --dur-base: 400ms;
+  --dur-slow: 900ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --marquee-loop: 40s;
+}
+
+/* Tablet mode (Figma frame 768) */
+@media (min-width: 48em) {
+  :root {
+    --type-caption: 14px;
+    --type-meta: 15px;
+    --type-body: 17px;
+    --type-link: 18px;
+    --type-lead: 21px;
+    --type-subtitle: 20px;
+    --type-label: 24px;
+    --type-statement: 32px;
+    --type-heading-s: 40px;
+    --type-heading-l: 72px;
+    --type-contact: 112px;
+    --type-display: 224px;
+
+    --space-xs: 12px;
+    --space-s: 16px;
+    --space-m: 20px;
+    --space-l: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+    --space-3xl: 80px;
+
+    --grid-margin: 40px;
+    --grid-gutter: 16px;
+  }
+}
+
+/* Desktop mode (Figma frame 1440) */
+@media (min-width: 80em) {
+  :root {
+    --type-caption: 14px;
+    --type-meta: 16px;
+    --type-body: 18px;
+    --type-link: 20px;
+    --type-lead: 24px;
+    --type-subtitle: 22px;
+    --type-label: 28px;
+    --type-statement: 40px;
+    --type-heading-s: 48px;
+    --type-heading-l: 96px;
+    --type-contact: 160px;
+    --type-display: 320px;
+
+    --space-m: 24px;
+    --space-l: 40px;
+    --space-xl: 56px;
+    --space-2xl: 80px;
+    --space-3xl: 96px;
+
+    --grid-margin: 80px;
+  }
+}
