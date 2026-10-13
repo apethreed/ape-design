@@ -55,6 +55,8 @@ Every English page has a German twin in `de/` and a Spanish twin in `es/` with t
 
 The German version uses Swiss spelling (ss instead of ß) and addresses the reader with "du". Each page head lists its twins (`hreflang` links), so Google shows visitors the version in their language.
 
+Every page also tells browsers not to auto translate it (`translate="no"` and the `notranslate` meta tag). Without this, Chrome turns the German pages back into English and translates the German word "es" in the language menu into "it".
+
 ## Folder map
 
 ```
