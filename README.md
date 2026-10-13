@@ -39,6 +39,16 @@ Double click `index.html`. It opens in your browser and works offline. No instal
 
 From then on, every change pushed to the repository goes live by itself in about a minute.
 
+## Search engines
+
+The site already tells Google who you are (structured data in each page head), lists its pages in `sitemap.xml` and allows indexing in `robots.txt`. To get indexed quickly:
+
+1. Connect `ape-design.com` to the Cloudflare project (all search settings point to that address).
+2. Open search.google.com/search-console, add the domain `ape-design.com` and verify it with the DNS option (Cloudflare can add the record in one click).
+3. In Search Console, open **Sitemaps** and submit `https://ape-design.com/sitemap.xml`.
+
+When you add a page, add its address to `sitemap.xml` too.
+
 ## Folder map
 
 ```
@@ -47,6 +57,9 @@ video-up.html         Case study
 petit-bambou.html     Case study
 demajo.html           Case study
 404.html              Page not found
+sitemap.xml, robots.txt   for search engines
+_headers              caching and security settings for Cloudflare
+wrangler.jsonc        Cloudflare settings
 assets/css/           styles (start with tokens.css)
 assets/js/            menu, language menu, scroll reveals
 assets/img/           images, logo, icons, share image

@@ -90,6 +90,13 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/fraunces-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- main.css imports the files below; preloading them saves a round trip -->
+  <link rel="preload" href="assets/css/reset.css" as="style">
+  <link rel="preload" href="assets/css/tokens.css" as="style">
+  <link rel="preload" href="assets/css/base.css" as="style">
+  <link rel="preload" href="assets/css/layout.css" as="style">
+  <link rel="preload" href="assets/css/components.css" as="style">
+  <link rel="preload" href="assets/css/motion.css" as="style">
   <link rel="stylesheet" href="assets/css/main.css">
 
   <script>document.documentElement.classList.add("js");</script>
@@ -218,7 +225,7 @@
   <footer class="site-footer">
     <img class="footer-brain" src="assets/img/brand-brain.svg" width="371" height="358" alt="">
     <div class="footer-bar">
-      <p class="text-caption-strong">Visual Designer. Based in Switzerland</p>
+      <p class="text-caption-strong">Alejandro Peña Campos · Visual Designer. Based in Switzerland</p>
       <p class="text-caption">For inquiries: <a href="mailto:contact@ape-design.com">contact@ape-design.com</a></p>
     </div>
   </footer>
