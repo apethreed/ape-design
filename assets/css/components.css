@@ -316,9 +316,8 @@
   pointer-events: none;
   font-family: var(--font-display);
   font-size: var(--type-display);
-  font-weight: 700;
+  font-weight: 400;
   line-height: var(--leading-display);
-  font-variation-settings: "SOFT" 0, "WONK" 1;
 }
 
 .marquee {
@@ -430,7 +429,8 @@
 
 /* ── Selected work ──────────────────────── */
 .work {
-  border-bottom: 1px solid var(--neutral-900);
+  background: var(--neutral-0);
+  border-bottom: 1px solid var(--color-line);
   color: var(--neutral-900);
 }
 
@@ -475,7 +475,8 @@
 /* ── Approach & Process ─────────────────── */
 .approach {
   --stack-gap: var(--space-2xl);
-  border-bottom: 1px solid var(--neutral-900);
+  background: var(--neutral-0);
+  border-bottom: 1px solid var(--color-line);
   color: var(--neutral-900);
 }
 
@@ -495,7 +496,7 @@
   padding: 16px;
 }
 
-.process-step:nth-child(odd) { background: var(--brand-scarlet-fire-stripe); }
+.process-step:nth-child(odd) { background: var(--surface-soft); }
 
 @media (min-width: 48em) {
   .process-step {

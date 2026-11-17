@@ -33,9 +33,8 @@ body {
 .text-statement,
 .text-label {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 400;
   line-height: var(--leading-display);
-  font-variation-settings: "SOFT" 0, "WONK" 1;
 }
 
 .text-signature { font-size: var(--type-display); }
